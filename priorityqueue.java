@@ -22,9 +22,9 @@
 // }
 
 /* Procedural implementation of priority queue using binary heap */
-import java.util.*;
-
+/* This is just application of max/min heap. Very similar implementation. */
 public class priorityqueue{
+    /* We will work with 0 index */
     static int[] heap  = {15, 25, 16, 30, 19, 23, 18, 2};
 
     void swap(int a, int b){
@@ -37,7 +37,7 @@ public class priorityqueue{
         /*This converts the given subtree into a heap by recursion.*/
         /*Note that n is total number of elements. So, all calculations will be made for n-1 array indices.*/
         int largest = i;
-        /*Here we consider the array starts from 1.*/
+        /*Here we consider the array starts from 0.*/
         int l = 2*i+1; //leftchild
         int r = 2*i+2; //rightchild
         if(l<n && priorityqueue.heap[l]>priorityqueue.heap[largest] ){
@@ -59,12 +59,14 @@ public class priorityqueue{
         }
     }
 
+    /* If we implement procedurally it will be converted to maxheap unlike if we use inbuilt 
+    library where it converts it into minheap by default. */
     void highestPriority(){
         System.out.println("Highest Priority: "+priorityqueue.heap[0]);
     }
 
     public static void main(String[] args){
-        int n = priorityqueue.heap.length;
+        int n = priorityqueue.heap.length; //length of array
         priorityqueue p = new priorityqueue();
         p.buildpq(n);
         for(int i=0; i<n; i++){
