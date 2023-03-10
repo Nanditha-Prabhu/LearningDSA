@@ -1,4 +1,5 @@
-/*HEAPSORT*/
+/* HEAP */
+/* Sort the elements using heap sort algo */
 #include <stdio.h>
 
 void swap(int a[], int i, int j){

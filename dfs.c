@@ -1,3 +1,4 @@
+/* GRAPHS */
 #include<stdio.h>
 
 /*Depth first search traverses till the final node of a depth is reached.

@@ -1,3 +1,5 @@
+/* HEAP */
+
 //implement max heap
 #include <stdio.h>
 #define MAX 20 /*Maximum elements it can store*/
